@@ -2,7 +2,7 @@ require 'yaml'
 
 module ZengoBot
   class Configuration
-    CREDENTIAL_YML = '../../config/credential.yml'
+    CREDENTIAL_YML = '../../../config/credential.yml'
 
     def self.credential_env_strings(br)
       new.credential_env_strings(br)

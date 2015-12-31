@@ -1,4 +1,4 @@
-require_relative '../libs/configuration'
+require_relative '../lib/zengo_bot'
 
 credentials  = ZengoBot::Configuration.credential_env_strings(br = true)
 dot_env_path = File.expand_path('../../.env', __FILE__)
