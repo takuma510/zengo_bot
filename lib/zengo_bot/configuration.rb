@@ -4,7 +4,7 @@ module ZengoBot
   class Configuration
     CREDENTIAL_YML = '../../../config/credential.yml'
 
-    def self.credential_env_strings(br)
+    def self.credential_env_strings(br = false)
       new.credential_env_strings(br)
     end
 
