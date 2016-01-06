@@ -16,7 +16,14 @@ module ZengoBot
     # @param month [String]
     # @return [Array]
     def self.find_by_month(month)
-      scan_opt = {
+      scan_out = @client.scan scan_opt(month)
+      scan_out.items
+    end
+
+    # @param month [String]
+    # @return [Hash]
+    def self.scan_opt(month)
+      {
         table_name: TABLE_NAME,
         scan_filter: {
           month: {
@@ -25,9 +32,6 @@ module ZengoBot
           }
         }
       }
-
-      scan_out = @client.scan scan_opt
-      scan_out.items
     end
 
     # @param zengo_list [Array]
@@ -49,7 +53,7 @@ module ZengoBot
 
     def method_missing(name)
       name_string = name.to_s
-      super unless %w{word yomi reference}.include? name_string
+      super unless %w( word yomi reference ).include? name_string
       @item[name_string]
     end
   end
