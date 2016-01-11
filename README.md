@@ -8,7 +8,7 @@ A bot tweets zen word.
 
 tweets from local.
 
-    $ ruby script/set_local_env.rb
+    $ bundle exec ruby script/set_local_env.rb
     $ heroku local
 
 run unit tests.
