@@ -5,7 +5,8 @@ module ZengoBot
   class Zengo
     TABLE_NAME = 'zengo'
 
-    @client = Aws::DynamoDB::Client.new
+    @region = ENV['AWS_REGION'] || 'ap-northeast-1'
+    @client = Aws::DynamoDB::Client.new(region: @region)
 
     # @return [Zengo]
     def self.today_one
