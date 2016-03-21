@@ -13,4 +13,4 @@ tweets from local.
 
 run unit tests.
 
-    $ bundle exec ruby test/unit/*.rb
+    $ bundle exec rake
