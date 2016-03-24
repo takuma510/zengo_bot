@@ -2,7 +2,7 @@
 
 require 'twitter'
 
-rest_client = Twitter::REST::Client.new do |config|
+twitter_rest_client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV['CONSUMER_KEY']
   config.consumer_secret     = ENV['CONSUMER_SECRET']
   config.access_token        = ENV['ACCESS_TOKEN']
@@ -10,5 +10,5 @@ rest_client = Twitter::REST::Client.new do |config|
 end
 
 require_relative '../lib/zengo_bot'
-bot = ZengoBot::Bot.new rest_client
+bot = ZengoBot::Bot.new twitter_rest_client, ZengoBot::ZengoFactory.new
 bot.tweet!
