@@ -1,5 +1,3 @@
-require 'aws-sdk'
-
 module ZengoBot
   # An instance represents one DynamoDB item
   class Zengo
