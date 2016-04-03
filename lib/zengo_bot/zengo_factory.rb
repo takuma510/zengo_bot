@@ -1,4 +1,3 @@
-require 'aws-sdk'
 require_relative 'zengo'
 require_relative 'zengo_factory/dynamodb_client'
 

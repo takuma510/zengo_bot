@@ -1,3 +1,5 @@
+require 'aws-sdk'
+
 module ZengoBot
   class ZengoFactory
     class DynamoDBClient
