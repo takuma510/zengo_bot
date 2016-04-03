@@ -14,3 +14,8 @@ tweets from local.
 run unit tests.
 
     $ bundle exec rake
+
+put zengo item.
+
+    $ bundle exec ruby script/set_local_env.rb
+    $ bundle exec ruby script/insert_zengo.rb word yomi month reference
